@@ -3,110 +3,115 @@
 
 /* --- VARIABLES DE LA CHARTE GRAPHIQUE --- */
 :root {
-    --font-h1: 'Libre Baskerville', serif;
-    --font-body: 'Poppins', sans-serif;
-    --font-accent: 'Parisienne', cursive;
-    
-    --color-bg-main: #FFFEFE; /* Blanc Galerie */
-    --color-bg-secondary: #F7F4E8; /* Sable Clair */
-    --color-text-main: #14141A; /* Noir Classique */
-    --color-primary: #0047AB; /* Azur Profond */
-    --color-accent: #C79F5E; /* Or Brossé */
-    --color-border: #EAEAEA;
+    --font-h1: 'Libre Baskerville', serif;
+    --font-body: 'Poppins', sans-serif;
+    --font-accent: 'Parisienne', cursive;
+    
+    --color-bg-main: #FFFEFE; /* Blanc Galerie */
+    --color-bg-secondary: #F7F4E8; /* Sable Clair */
+    --color-text-main: #14141A; /* Noir Classique */
+    --color-primary: #0047AB; /* Azur Profond */
+    --color-accent: #C79F5E; /* Or Brossé */
+    --color-border: #EAEAEA;
 }
 
 /* --- RESET & BODY --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-body);
-    color: var(--color-text-main);
-    background-color: #F0F0F0;
-    font-size: 16px;
-    line-height: 1.7;
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: #F0F0F0;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 a { 
-    text-decoration: none; 
-    color: inherit;
+    text-decoration: none; 
+    color: inherit;
 }
 
 /* --- STRUCTURE & LAYOUT --- */
 .page-wrapper {
-    background-color: var(--color-bg-main);
-    margin: 40px auto;
-    width: 1440px; /* Largeur fixe de 1440px */
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-    overflow: hidden;
+    background-color: var(--color-bg-main);
+    margin: 40px auto;
+    
+    /* --- MODIFICATION RESPONSIVE CLÉ --- */
+    max-width: 1440px; /* Le site ne dépassera PAS 1440px */
+    width: 100%;       /* Mais il prendra 100% si l'écran est plus petit */
+    /* --- FIN DE LA MODIFICATION --- */
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 .page-separator {
-    text-align: center;
-    padding: 20px;
-    font-family: var(--font-h1);
-    color: #FFFFFF;
-    background-color: #14141A;
-    font-size: 14px;
-    width: 1440px;
-    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    font-family: var(--font-h1);
+    color: #FFFFFF;
+    background-color: #14141A;
+    font-size: 14px;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
 }
 
 /* --- ELEMENTS COMMUNS --- */
 header, footer {
-    padding: 20px 40px;
-    border-bottom: 1px solid var(--color-border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-bg-main);
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg-main);
 }
 
 footer {
-    border-bottom: none;
-    border-top: 1px solid var(--color-border);
-    background-color: var(--color-bg-secondary);
+    border-bottom: none;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-secondary);
 }
 
 .logo img {
-    height: 40px;
+    height: 40px;
 }
 
 nav a {
-    margin-left: 30px;
-    color: var(--color-text-main);
-    font-weight: 600;
-    position: relative;
-    padding: 5px 0;
-    font-family: var(--font-body);
+    margin-left: 30px;
+    color: var(--color-text-main);
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    font-family: var(--font-body);
 }
 
 nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-primary);
-    transition: width 0.3s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
 }
 
 nav a:hover::after {
-    width: 100%;
+    width: 100%;
 }
 
 h1, h2, h3 {
-    font-weight: 700;
+    font-weight: 700;
 }
 
 h1 { font-family: var(--font-h1); font-size: 52px; line-height: 1.2; color: var(--color-primary); margin-bottom: 15px; }
@@ -117,22 +122,22 @@ p { font-family: var(--font-body); margin-bottom: 15px; max-width: 600px; color:
 li { font-family: var(--font-body); }
 
 .button {
-    display: inline-block;
-    padding: 14px 30px;
-    background-color: var(--color-primary);
-    color: var(--color-bg-main);
-    border: 2px solid var(--color-primary);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    font-family: var(--font-body);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-main);
+    border: 2px solid var(--color-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .button:hover {
-    background-color: transparent;
-    color: var(--color-primary);
+    background-color: transparent;
+    color: var(--color-primary);
 }
 
 .grid { display: grid; gap: 40px; }
@@ -172,3 +177,181 @@ li { font-family: var(--font-body); }
 
 .legal-page { max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 40px; }
 .legal-page h1 { text-align: center; margin-bottom: 40px;}
+
+
+/* ==================================================================
+    !!! DEBUT DU CODE RESPONSIVE (MOBILE) !!! 
+    C'est l'ajout que vous avez demandé.
+==================================================================
+*/
+
+/* On applique ces styles si l'écran fait 768px de large ou MOINS */
+@media (max-width: 768px) {
+
+    /* --- STRUCTURE & LAYOUT (MOBILE) --- */
+    .page-wrapper {
+        /* On enlève les marges haut/bas et l'ombre sur mobile */
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .container {
+        /* On réduit les gros paddings du PC */
+        padding: 50px 20px;
+    }
+
+    /* --- ELEMENTS COMMUNS (MOBILE) --- */
+    
+    /* On change le header pour qu'il s'empile verticalement */
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logo img {
+        height: 30px; /* Plus petit logo sur mobile */
+    }
+    
+    /* On change la nav pour qu'elle s'empile aussi */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    nav a {
+        /* On enlève la marge à gauche pour centrer */
+        margin-left: 0; 
+        font-size: 18px;
+    }
+
+    /* On change le footer pour qu'il s'empile */
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px 20px;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* --- TYPOGRAPHIE (MOBILE) --- */
+    h1 { font-size: 34px; line-height: 1.3; }
+    h2 { font-size: 30px; margin-bottom: 40px; }
+    h3 { font-size: 20px; line-height: 1.3; }
+    p { font-size: 16px; line-height: 1.6; }
+
+    /* Le bouton prend toute la largeur */
+    .button {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    /* --- STYLES SPECIFIQUES (MOBILE) --- */
+    
+    /* Page Accueil */
+    .hero .decorative-subtitle { font-size: 28px; }
+
+    .trust-band {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .gallery-preview .grid {
+        /* On passe de 4 colonnes à 2 */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .artwork-card .artwork-image {
+        /* On réduit la hauteur de l'image */
+        height: 180px; 
+        margin-bottom: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .artwork-card h3 { font-size: 16px; margin-bottom: 5px; }
+    .artwork-card p.artist-story {
+        font-size: 13px;
+        min-height: 50px; /* On réduit la hauteur min */
+        margin-bottom: 5px;
+    }
+    .artwork-card strong { font-size: 14px; }
+
+
+    .lifestyle-section {
+        /* On empile l'image et le texte */
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .lifestyle-section .lifestyle-image,
+    .lifestyle-section .text-content {
+        /* Les deux prennent 100% de la largeur */
+        width: 100%; 
+    }
+    
+    .lifestyle-section .lifestyle-image {
+        height: 300px;
+        margin-bottom: 0; /* Écrase la marge de l'image */
+    }
+
+    /* Page Galerie */
+    .gallery-grid .grid {
+        /* On passe de 3 colonnes à 2 */
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Page Concept */
+    .concept-section {
+        margin-bottom: 50px;
+    }
+    
+    .info-block .grid {
+        /* On empile les 2 colonnes */
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* On inverse l'ordre pour la 2e grille de la page concept */
+    .info-block .grid img[src="images/img-4.jpg"] {
+        /* L'image est en 1er dans le HTML, on la met en 2e */
+        order: 2;
+    }
+    
+    .info-block .grid img[src="images/img-4.jpg"] + .text-content {
+        order: 1;
+    }
+
+
+    /* Page Contact */
+    .contact-grid {
+        /* On empile les 2 colonnes */
+        grid-template-columns: 1fr;
+    }
+
+    .private-visit {
+        margin-top: 40px;
+        padding: 25px;
+    }
+
+    /* Pages Légales */
+    .legal-page {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .legal-page h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+}
+/* --- !!! FIN DU CODE RESPONSIVE !!! --- */
