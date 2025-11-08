@@ -40,7 +40,6 @@ a {
 .page-wrapper {
     background-color: var(--color-bg-main);
     margin: 40px auto;
-    /* --- MODIFICATION RESPONSIVE --- */
     max-width: 1440px; /* Largeur maximale */
     width: 100%;       /* Largeur fluide */
     box-shadow: 0 5px 25px rgba(0,0,0,0.1);
@@ -54,7 +53,6 @@ a {
     color: #FFFFFF;
     background-color: #14141A;
     font-size: 14px;
-    /* --- MODIFICATION RESPONSIVE --- */
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
@@ -73,7 +71,7 @@ header, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Ajouté pour la flexibilité */
+    flex-wrap: wrap; 
     background-color: var(--color-bg-main);
 }
 
@@ -327,13 +325,16 @@ li { font-family: var(--font-body); }
         gap: 30px;
     }
 
-    /* On inverse l'ordre pour la 2e grille de la page concept */
-    .info-block .grid img[src="images/img-4.jpg"] {
+    /* --- MODIFICATION ---
+      On enlève "images/" du chemin pour qu'il corresponde
+      à l'emplacement de votre fichier.
+    */
+    .info-block .grid img[src="img-4.jpg"] {
         /* L'image est en 1er dans le HTML, on la met en 2e */
         order: 2;
     }
 
-    .info-block .grid img[src="images/img-4.jpg"] + .text-content {
+    .info-block .grid img[src="img-4.jpg"] + .text-content {
         order: 1;
     }
 
