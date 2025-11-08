@@ -38,18 +38,13 @@ a { 
 /* --- STRUCTURE & LAYOUT --- */
 .page-wrapper {
     background-color: var(--color-bg-main);
-    margin: 40px auto; /* Garde la marge haut/bas sur PC */
-    
-    /* --- MODIFICATION CLÉ POUR L'ADAPTATION --- */
-    max-width: 1440px; /* Au lieu de 'width', on utilise 'max-width' */
-    width: 100%;       /* Prend 100% de la largeur, JUSQU'À 1440px */
-    /* --- FIN DE LA MODIFICATION --- */
-
+    margin: 40px auto; 
+    max-width: 1440px; 
+    width: 100%; 
     box-shadow: 0 5px 25px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
-/* On ne l'utilise plus, mais on le garde au cas où */
 .page-separator {
     text-align: center;
     padding: 20px;
