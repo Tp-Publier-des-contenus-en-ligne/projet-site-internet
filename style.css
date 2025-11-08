@@ -28,7 +28,7 @@ body {
     background-color: #F0F0F0;
     font-size: 16px;
     line-height: 1.7;
-    overflow-x: hidden; /* Empêche le débordement horizontal */
+    overflow-x: hidden; 
 }
 
 a { 
@@ -40,8 +40,11 @@ a {
 .page-wrapper {
     background-color: var(--color-bg-main);
     margin: 40px auto;
-    max-width: 1440px; /* Largeur maximale */
-    width: 100%;       /* Largeur fluide */
+    
+    /* <-- C'EST TA REGLE ! On applique ta logique : */
+    max-width: 1440px; /* Ne dépasse jamais 1440px */
+    width: 100%;       /* Mais prend 100% si l'écran est plus petit */
+    
     box-shadow: 0 5px 25px rgba(0,0,0,0.1);
     overflow: hidden;
 }
@@ -53,13 +56,18 @@ a {
     color: #FFFFFF;
     background-color: #14141A;
     font-size: 14px;
+    
+    /* <-- C'EST TA REGLE ! Idem pour cet élément */
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
 
 .container {
-    max-width: 1200px;
+    /* <-- C'EST TA REGLE ! Le conteneur intérieur principal */
+    max-width: 1200px; /* Limite la largeur du contenu */
+    width: 100%;       /* Fluide sur les écrans plus petits */
+    
     margin: 0 auto;
     padding: 100px 20px;
 }
@@ -169,15 +177,13 @@ li { font-family: var(--font-body); }
 .info-block { background-color: var(--color-bg-secondary); }
 .info-block .grid { grid-template-columns: 1fr 1fr; align-items: center; }
 
-/* --- AJOUT --- */
-/* Règle pour contraindre les images de la page concept */
+/* <-- C'EST TA REGLE ! On dit à l'image de prendre 100% de son parent */
 .info-block .grid img {
     width: 100%;
-    height: 450px; /* Hauteur fixe pour l'uniformité */
-    object-fit: cover; /* Recadre l'image pour remplir la boite */
-    display: block; /* Enlève un petit espace sous l'image */
+    height: 450px; 
+    object-fit: cover; 
+    display: block; 
 }
-/* --- FIN DE L'AJOUT --- */
 
 
 .contact-grid { grid-template-columns: 2fr 1fr; }
@@ -299,6 +305,7 @@ li { font-family: var(--font-body); }
 
     .lifestyle-section .lifestyle-image,
     .lifestyle-section .text-content {
+        /* <-- C'EST TA REGLE ! 100% pour s'empiler */
         width: 100%; 
     }
 
@@ -322,13 +329,9 @@ li { font-family: var(--font-body); }
         gap: 30px;
     }
 
-    /* --- AJOUT --- */
-    /* On ajuste la hauteur de l'image pour le mobile */
     .info-block .grid img {
-        height: 300px;
+        height: 300px; /* On ajuste juste la hauteur pour mobile */
     }
-    /* --- FIN DE L'AJOUT --- */
-
 
     .info-block .grid img[src="img-4.jpg"] {
         order: 2;
