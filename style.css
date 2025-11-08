@@ -28,6 +28,7 @@ body {
     background-color: #F0F0F0;
     font-size: 16px;
     line-height: 1.7;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
 }
 
 a { 
@@ -39,7 +40,9 @@ a {
 .page-wrapper {
     background-color: var(--color-bg-main);
     margin: 40px auto;
-    width: 1440px; /* Largeur fixe de 1440px */
+    /* --- MODIFICATION RESPONSIVE --- */
+    max-width: 1440px; /* Largeur maximale */
+    width: 100%;       /* Largeur fluide */
     box-shadow: 0 5px 25px rgba(0,0,0,0.1);
     overflow: hidden;
 }
@@ -51,14 +54,16 @@ a {
     color: #FFFFFF;
     background-color: #14141A;
     font-size: 14px;
-    width: 1440px;
+    /* --- MODIFICATION RESPONSIVE --- */
+    max-width: 1440px; /* Assorti au page-wrapper s'il est au même niveau */
+    width: 100%;
     margin: 0 auto;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 100px 20px; /* Padding horizontal ajouté pour les petits écrans */
 }
 
 /* --- ELEMENTS COMMUNS --- */
@@ -68,6 +73,7 @@ header, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si pas de place */
     background-color: var(--color-bg-main);
 }
 
@@ -141,7 +147,7 @@ li { font-family: var(--font-body); }
 .hero { text-align: center; }
 .hero .decorative-subtitle { font-family: var(--font-accent); font-size: 32px; color: var(--color-accent); margin-bottom: 25px; }
 
-.trust-band { display: flex; justify-content: space-around; padding: 40px 20px; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background-color: var(--color-bg-secondary); }
+.trust-band { display: flex; justify-content: space-around; padding: 40px 20px; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background-color: var(--color-bg-secondary); flex-wrap: wrap; gap: 20px; } /* Ajout de flex-wrap et gap */
 .trust-item { text-align: center; font-weight: 600; font-family: var(--font-body); }
 
 .gallery-preview .grid { grid-template-columns: repeat(4, 1fr); }
@@ -171,4 +177,170 @@ li { font-family: var(--font-body); }
 .private-visit h3 { margin-top: 0; color: var(--color-primary); }
 
 .legal-page { max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 40px; }
-.legal-page h1 { text-align: center; margin-bottom: 40px;}
+.legal-page h1 { text-align: center; margin-bottom: 40px; }
+
+
+/*
+|--------------------------------------------------------------------------
+| --- AJOUTS POUR LE RESPONSIVE ---
+|--------------------------------------------------------------------------
+| J'utilise une approche "desktop-first" (en me basant sur votre code)
+| en ajoutant des points de rupture pour les écrans plus petits.
+*/
+
+/* -- Breakpoint Large (Tablettes paysage, petits desktops) -- */
+@media (max-width: 1200px) {
+    .container {
+        padding: 80px 20px;
+    }
+    
+    .gallery-preview .grid {
+        grid-template-columns: repeat(3, 1fr); /* 4 -> 3 cols */
+    }
+    
+    .gallery-grid .grid {
+        grid-template-columns: repeat(2, 1fr); /* 3 -> 2 cols */
+    }
+
+    .lifestyle-section {
+        gap: 40px;
+    }
+    
+    .lifestyle-section .lifestyle-image {
+        height: 400px; /* Réduction de la hauteur fixe */
+    }
+}
+
+
+/* -- Breakpoint Medium (Tablettes portrait) -- */
+@media (max-width: 992px) {
+    .gallery-preview .grid {
+        grid-template-columns: repeat(2, 1fr); /* 3 -> 2 cols */
+    }
+
+    /* Empilement des sections 50/50 */
+    .lifestyle-section {
+        flex-direction: column; /* Passage en colonne */
+        gap: 40px;
+    }
+
+    .lifestyle-section .lifestyle-image,
+    .lifestyle-section .text-content {
+        width: 100%; /* Pleine largeur */
+    }
+    
+    .lifestyle-section .lifestyle-image {
+        height: 350px; /* Hauteur ajustée */
+    }
+
+    /* Empilement des grilles à 2 colonnes */
+    .info-block .grid {
+        grid-template-columns: 1fr; /* Passage en colonne */
+        gap: 30px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Passage en colonne */
+        gap: 30px;
+    }
+}
+
+
+/* -- Breakpoint Small (Mobiles) -- */
+@media (max-width: 768px) {
+    .page-wrapper {
+        margin: 0; /* Suppression des marges sur mobile */
+        box-shadow: none; /* Suppression de l'ombre */
+    }
+
+    .container {
+        padding: 60px 20px; /* Padding réduit */
+    }
+
+    /* --- Header & Nav Mobile --- */
+    header {
+        flex-direction: column; /* Logo et nav l'un sur l'autre */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 10px; /* Espace réduit */
+        font-size: 15px;
+    }
+
+    /* --- Typographie Mobile --- */
+    h1 { font-size: 38px; line-height: 1.3; }
+    h2 { font-size: 30px; margin-bottom: 40px; }
+    h3 { font-size: 20px; }
+    
+    .hero .decorative-subtitle { font-size: 26px; }
+
+    /* --- Grids Mobile --- */
+    .gallery-preview .grid,
+    .gallery-grid .grid {
+        grid-template-columns: 1fr; /* Toujours 1 colonne */
+        gap: 30px;
+    }
+    
+    .artwork-card .artwork-image {
+         height: 300px; /* Hauteur ajustée */
+    }
+    
+    .artwork-card p.artist-story {
+        min-height: unset; /* Pas de hauteur minimum */
+        padding-bottom: 15px;
+    }
+
+    .trust-band {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Passage à 2 colonnes */
+        gap: 25px;
+    }
+    
+    .legal-page {
+        padding: 20px;
+    }
+}
+
+/* -- Breakpoint Extra Small (Petits Mobiles) -- */
+@media (max-width: 576px) {
+     h1 { font-size: 32px; }
+     h2 { font-size: 26px; }
+     
+     .container {
+         padding: 40px 15px; /* Padding encore réduit */
+     }
+     
+     header, footer {
+         padding: 20px 15px; /* Padding encore réduit */
+         text-align: center; /* Centrer le footer */
+     }
+     
+     footer {
+         flex-direction: column; /* Empiler les éléments du footer */
+         gap: 15px;
+     }
+
+     .button {
+         padding: 12px 24px; /* Boutons légèrement plus petits */
+         font-size: 14px;
+         width: 100%; /* Boutons en pleine largeur pour un meilleur clic */
+     }
+     
+     .contact-form .button {
+         width: auto; /* Sauf pour le formulaire */
+     }
+     
+     .trust-band {
+         grid-template-columns: 1fr; /* 1 colonne pour les très petits écrans */
+     }
+}
