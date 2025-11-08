@@ -164,7 +164,7 @@ li { font-family: var(--font-body); }
 .artwork-card strong { color: var(--color-primary); font-family: var(--font-body); }
 
 .lifestyle-section { display: flex; align-items: center; gap: 80px; }
-.lifestyle-section .lifestyle-image { width: 50%; height: 500px; object-fit: cover; }
+.lifestyle-section .lifestyle-image { width: 50%; height: 100%; object-fit: cover; }
 .lifestyle-section .text-content { width: 50%; }
 
 .cta-section { background-color: var(--color-bg-secondary); text-align: center; }
@@ -310,7 +310,7 @@ li { font-family: var(--font-body); }
     }
 
     .lifestyle-section .lifestyle-image {
-        height: 300px;
+        height: 100%;
         margin-bottom: 0; 
     }
 
@@ -363,3 +363,4 @@ li { font-family: var(--font-body); }
     }
 }
 /* --- !!! FIN DU CODE RESPONSIVE !!! --- */
+
