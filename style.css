@@ -25,7 +25,10 @@
 body {
     font-family: var(--font-body);
     color: var(--color-text-main);
-    background-color: #F0F0F0;
+    /* --- MODIFICATION 1 --- 
+       On met le fond du body en blanc, comme le site.
+    */
+    background-color: var(--color-bg-main);
     font-size: 16px;
     line-height: 1.7;
     overflow-x: hidden; /* Empêche tout débordement horizontal du body */
@@ -39,11 +42,15 @@ a {
 /* --- STRUCTURE & LAYOUT --- */
 .page-wrapper {
     background-color: var(--color-bg-main);
-    margin: 40px auto;
-    max-width: 1440px; /* Ne dépasse jamais 1440px */
-    width: 100%;       /* Mais prend 100% si l'écran est plus petit */
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-    overflow: hidden; /* Cache tout ce qui dépasse à l'intérieur du wrapper */
+    /* --- MODIFICATION 2 --- 
+       On enlève la marge haut/bas (40px) et l'ombre.
+       "0 auto" veut dire "0 en haut/bas, centré automatiquement gauche/droite".
+    */
+    margin: 0 auto;
+    max-width: 1440px; /* On garde la largeur max pour que le design ne casse pas */
+    width: 100%;       
+    box-shadow: none; /* On enlève l'ombre */
+    overflow: hidden; 
 }
 
 .page-separator {
@@ -194,14 +201,9 @@ li { font-family: var(--font-body); }
 .concept-section { max-width: 800px; margin: 0 auto 80px auto; text-align: center;}
 .concept-section p { margin-left: auto; margin-right: auto; }
 
-/* ↓↓↓ MODIFICATION ICI ↓↓↓
-   .info-block ne gère QUE le fond beige
-*/
+
 .info-block { background-color: var(--color-bg-secondary); }
 
-/*
-   .grid-concept gère la MISE EN PAGE 2 COLONNES pour les 2 blocs
-*/
 .grid-concept { 
     grid-template-columns: 1fr 1fr; 
     align-items: center; 
@@ -286,7 +288,6 @@ li { font-family: var(--font-body); }
         padding: 30px 20px;
     }
 
-    /* ↓↓↓ NOUVELLE RÈGLE ICI ↓↓↓ */
     footer div { /* Cible le div qui contient les liens du footer */
         flex-direction: row; /* Force les liens à s'aligner horizontalement */
         justify-content: center; /* Centre le contenu horizontalement */
@@ -295,7 +296,6 @@ li { font-family: var(--font-body); }
         gap: 10px; /* Espace entre les liens du footer */
         font-size: 14px; /* Rend le texte un peu plus petit sur mobile */
     }
-    /* ↑↑↑ FIN DE LA NOUVELLE RÈGLE ↑↑↑ */
 
     /* --- TYPOGRAPHIE (MOBILE) --- */
     h1 { font-size: 34px; line-height: 1.3; }
@@ -367,9 +367,6 @@ li { font-family: var(--font-body); }
         margin-bottom: 50px;
     }
 
-    /* ↓↓↓ MODIFICATION ICI ↓↓↓
-       On dit à .grid-concept de s'empiler sur mobile
-    */
     .grid-concept {
         grid-template-columns: 1fr;
         gap: 30px;
