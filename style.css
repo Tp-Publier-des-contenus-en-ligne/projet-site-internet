@@ -194,11 +194,14 @@ li { font-family: var(--font-body); }
 .concept-section { max-width: 800px; margin: 0 auto 80px auto; text-align: center;}
 .concept-section p { margin-left: auto; margin-right: auto; }
 
-/* --- MODIFICATION --- */
-/* Le fond beige ne s'applique qu'à .info-block */
+/* ↓↓↓ MODIFICATION ICI ↓↓↓
+   .info-block ne gère QUE le fond beige
+*/
 .info-block { background-color: var(--color-bg-secondary); }
 
-/* La mise en page 2 colonnes s'applique à notre nouvelle classe */
+/*
+   .grid-concept gère la MISE EN PAGE 2 COLONNES pour les 2 blocs
+*/
 .grid-concept { 
     grid-template-columns: 1fr 1fr; 
     align-items: center; 
@@ -360,8 +363,9 @@ li { font-family: var(--font-body); }
         margin-bottom: 50px;
     }
 
-    /* --- MODIFICATION --- */
-    /* On empile les 2 colonnes sur mobile */
+    /* ↓↓↓ MODIFICATION ICI ↓↓↓
+       On dit à .grid-concept de s'empiler sur mobile
+    */
     .grid-concept {
         grid-template-columns: 1fr;
         gap: 30px;
