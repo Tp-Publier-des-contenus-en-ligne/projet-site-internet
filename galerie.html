@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Galerie - Azur'Arts</title>
+    
+    <title>Vente Tableaux & Œuvres d'Art à Nice - Catalogue Azur'Arts</title>
+    
+    <meta name="description" content="Explorez notre catalogue d'œuvres d'art en vente à Nice. Peintures, sculptures et impressions signées. Investissez dans l'art contemporain et classique.">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="img-logo.jpg">
 </head>
 <body>
 
@@ -12,11 +17,11 @@
     
         <header>
             <div class="container">
-                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Azur'Arts Logo"></a>
+                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Logo Galerie Azur'Arts Nice"></a>
                 
                 <nav>
                     <a href="index.html">Accueil</a>
-                    <a href="galerie.html">La Galerie</a>
+                    <a href="galerie.html" aria-current="page">La Galerie</a>
                     <a href="concept.html">Notre Concept</a>
                     <a href="contact.html">Contact & Conseil</a>
                 </nav>
@@ -27,28 +32,121 @@
 
         <main>
              <div class="container gallery-grid">
-                 <h2>La Galerie</h2>
+                 
+                 <h1>Catalogue d'Art et Vente en Ligne</h1>
+                 
+                 <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+                     Retrouvez notre sélection exclusive d'œuvres disponibles à la vente ou à la réservation. 
+                     Notre galerie située à <strong>Nice</strong> vous propose des pièces originales certifiées et des éditions limitées pour enrichir votre collection.
+                 </p>
+
                  <div class="grid">
                  
-                    <div class="artwork-card"><a href="#"><img src="img-1.jpg" class="artwork-image" alt="Le Fils de l'homme par René Magritte"></a><h3>Le Fils de l'homme</h3><p class="artist-story">René Magritte</p><strong>Prix sur demande</strong></div>
-                     <div class="artwork-card"><a href="#"><img src="img-2.jpg" class="artwork-image" alt="Composition VIII par Vassily Kandinsky"></a><h3>Composition VIII</h3><p class="artist-story">Vassily Kandinsky</p><strong>Prix sur demande</strong></div>
-                     <div class="artwork-card"><a href="#"><img src="img-3.jpg" class="artwork-image" alt="La Danse par Henri Matisse"></a><h3>La Danse</h3><p class="artist-story">Henri Matisse</p><strong>Édition signée</strong></div>
-                     <div class="artwork-card"><a href="#"><img src="img-4.jpg" class="artwork-image" alt="Paysage de montagne par Artiste Inconnu"></a><h3>Paysage de montagne</h3><p class="artist-story">Artiste Inconnu</p><strong>350 € (Édition)</strong></div>
-                     <div class="artwork-card"><a href="#"><img src="img-5.jpg" class="artwork-image" alt="La Persistance de la mémoire par Salvador Dalí"></a><h3>La Persistance de la mémoire</h3><p class="artist-story">Salvador Dalí</p><strong>Édition signée</strong></div>
-                     <div class="artwork-card"><a href="#"><img src="img-6.jpg" class="artwork-image" alt="La Vague par Katsushika Hokusai"></a><h3>La Vague</h3><p class="artist-story">Katsushika Hokusai</p><strong>400 € (Édition)</strong></div>
-                     <div class="artwork-card"><a href="#"><img src="img-1.jpg" class="artwork-image" alt="Impression de Le Fils de l'homme par René Magritte"></a><h3>Le Fils de l'homme (Impression)</h3><p class="artist-story">René Magritte</p><strong>150 € (Impression)</strong></div>
-                     <div class="artwork-card"><a href="#"><img src="img-2.jpg" class="artwork-image" alt="Impression de Composition VIII par Vassily Kandinsky"></a><h3>Composition VIII (Impression)</h3><p class="artist-story">Vassily Kandinsky</p><strong>150 € (Impression)</strong></div>
-                     </div>
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Demander le prix pour Le Fils de l'homme">
+                            <img src="img-1.jpg" class="artwork-image" alt="Tableau Le Fils de l'homme par René Magritte - Surréalisme">
+                        </a>
+                        <h2>Le Fils de l'homme</h2> <p class="artist-story">René Magritte - Huile sur toile</p>
+                        <strong>Prix sur demande</strong>
+                    </article>
+
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Demander le prix pour Composition VIII">
+                            <img src="img-2.jpg" class="artwork-image" alt="Peinture abstraite Composition VIII par Vassily Kandinsky">
+                        </a>
+                        <h2>Composition VIII</h2>
+                        <p class="artist-story">Vassily Kandinsky - Art Abstrait</p>
+                        <strong>Prix sur demande</strong>
+                    </article>
+
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Acheter La Danse">
+                            <img src="img-3.jpg" class="artwork-image" alt="La Danse par Henri Matisse - Fauvisme">
+                        </a>
+                        <h2>La Danse</h2>
+                        <p class="artist-story">Henri Matisse - Grande huile</p>
+                        <strong>Édition signée</strong>
+                    </article>
+
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Acheter Paysage de montagne">
+                            <img src="img-4.jpg" class="artwork-image" alt="Paysage classique de montagne romantique">
+                        </a>
+                        <h2>Paysage de montagne</h2>
+                        <p class="artist-story">École Romantique - XIXe siècle</p>
+                        <strong>350 € (Édition)</strong>
+                    </article>
+
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Acheter La Persistance de la mémoire">
+                            <img src="img-5.jpg" class="artwork-image" alt="Montres molles de Dali - La Persistance de la mémoire">
+                        </a>
+                        <h2>La Persistance de la mémoire</h2>
+                        <p class="artist-story">Salvador Dalí - Surréalisme</p>
+                        <strong>Édition signée</strong>
+                    </article>
+
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Acheter La Vague">
+                            <img src="img-6.jpg" class="artwork-image" alt="Estampe japonaise La Vague de Hokusai">
+                        </a>
+                        <h2>La Vague</h2>
+                        <p class="artist-story">Katsushika Hokusai - Estampe</p>
+                        <strong>400 € (Édition)</strong>
+                    </article>
+
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Commander impression Magritte">
+                            <img src="img-1.jpg" class="artwork-image" alt="Reproduction haute qualité Magritte">
+                        </a>
+                        <h2>Le Fils de l'homme (Impression)</h2>
+                        <p class="artist-story">Reproduction d'art certifiée</p>
+                        <strong>150 € (Impression)</strong>
+                    </article>
+
+                    <article class="artwork-card">
+                        <a href="contact.html" aria-label="Commander impression Kandinsky">
+                            <img src="img-2.jpg" class="artwork-image" alt="Reproduction haute qualité Kandinsky">
+                        </a>
+                        <h2>Composition VIII (Impression)</h2>
+                        <p class="artist-story">Reproduction d'art certifiée</p>
+                        <strong>150 € (Impression)</strong>
+                    </article>
+
+                 </div>
+             </div>
+
+             <div class="container seo-text-block" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee;">
+                 <h2>Investir dans l'Art à Nice et sur la Côte d'Azur</h2>
+                 <p>
+                     L'achat d'une œuvre d'art est une démarche personnelle qui allie émotion esthétique et constitution de patrimoine. 
+                     Chez <strong>Azur'Arts</strong>, nous facilitons cette rencontre entre les collectionneurs et les créations marquantes de l'histoire de l'art.
+                 </p>
+                 
+                 <h3>Authenticité et Expertise</h3>
+                 <p>
+                     Chaque tableau, sculpture ou photographie présenté dans notre galerie fait l'objet d'une vérification rigoureuse. 
+                     Que vous soyez intéressé par le <em>surréalisme</em>, l'<em>art abstrait</em> ou les paysages romantiques, nous garantissons la provenance de nos pièces. 
+                     Toutes nos œuvres sont vendues avec un <strong>certificat d'authenticité</strong>, indispensable pour les assurances et la valorisation future de votre collection.
+                 </p>
+
+                 <h3>Livraison et Installation</h3>
+                 <p>
+                     Nous assurons une expédition sécurisée de nos œuvres depuis Nice vers toute la France et l'international. 
+                     Pour nos clients locaux (Cannes, Monaco, Antibes), nous proposons un service d'installation à domicile pour mettre en valeur votre acquisition dans votre intérieur.
+                     N'hésitez pas à nous contacter pour obtenir des conseils personnalisés sur l'agencement et l'éclairage de vos tableaux.
+                 </p>
              </div>
         </main>
 
         <footer>
             <div class="container">
-                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Azur'Arts Logo"></a>
+                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Logo Galerie Azur'Arts"></a>
                 <div>
                     <a href="mentions-legales.html">Mentions Légales</a>
                     <a href="cgv.html">CGV</a>
-                    <span>© 2025</span>
+                    <a href="contact.html">Plan du site</a>
+                    <span>© 2025 Azur'Arts Nice</span>
                 </div>
             </div>
         </footer>
