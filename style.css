@@ -519,13 +519,24 @@ li {
         gap: 20px;
     }
     
-    /* MODIFICATION : Liens footer alignés horizontalement */
+/* DANS LA PARTIE @media (max-width: 900px) TOUT EN BAS */
+    
+    /* 1. On force le conteneur à être une ligne flexible */
     footer .container div {
-        display: flex;
-        flex-direction: row;      /* Force l'alignement horizontal */
-        flex-wrap: wrap;          /* Permet le retour à la ligne si écran trop petit */
-        justify-content: center;  /* Centre le tout */
-        align-items: center;
-        gap: 15px;                /* Espace entre les liens */
+        display: flex !important;        /* Force le mode Flexbox */
+        flex-direction: row !important;  /* Force l'horizontale (LIGNE) */
+        flex-wrap: wrap !important;      /* Permet de passer à la ligne SI l'écran est trop petit */
+        justify-content: center !important; /* Centre tout le monde */
+        align-items: center !important;
+        gap: 15px !important;            /* Espace entre les mots */
+        width: 100%;                     /* Prend toute la largeur dispo */
     }
-}
+
+    /* 2. On s'assure que les liens eux-mêmes ne prennent pas toute la largeur */
+    footer .container div a, 
+    footer .container div span {
+        display: inline-block !important; /* Comportement de texte simple */
+        width: auto !important;           /* Taille adaptée au texte, pas à l'écran */
+        margin: 0 !important;             /* On gère l'espace avec 'gap' au dessus */
+        font-size: 12px;                  /* On réduit un peu la police sur mobile pour que ça rentre */
+    }
