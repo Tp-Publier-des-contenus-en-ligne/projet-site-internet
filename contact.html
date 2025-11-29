@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Conseil - Azur'Arts</title>
+    
+    <title>Contactez Azur'Arts | Galerie Art Nice & Rendez-vous Conseil</title>
+    
+    <meta name="description" content="Prenez rendez-vous chez Azur'Arts à Nice. Contactez-nous pour l'achat de tableaux, conseil en décoration ou livraison d'œuvres sur la Côte d'Azur.">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="img-logo.jpg">
 </head>
 <body>
 
@@ -12,40 +17,109 @@
     
         <header>
             <div class="container">
-                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Azur'Arts Logo"></a>
+                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Logo Galerie Azur'Arts"></a>
                 
                 <nav>
                     <a href="index.html">Accueil</a>
                     <a href="galerie.html">La Galerie</a>
                     <a href="concept.html">Notre Concept</a>
-                    <a href="contact.html">Contact & Conseil</a>
+                    <a href="contact.html" aria-current="page">Contact & Conseil</a>
                 </nav>
 
                 <button class="menu-mobile-btn">MENU</button>
             </div>
         </header>
+
         <main>
              <div class="container">
-                 <h2>Contact & Conseil</h2>
+                 <h1>Contactez notre Galerie à Nice</h1>
+                 
+                 <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+                     Vous souhaitez acquérir une œuvre, obtenir des conseils en décoration ou planifier une visite privée ? 
+                     L'équipe d'<strong>Azur'Arts</strong> est à votre écoute au cœur de la Côte d'Azur.
+                 </p>
+
                  <div class="grid contact-grid">
-                     <div class="contact-form"><h3>Nous écrire</h3><input type="text" placeholder="Votre nom"><input type="email" placeholder="Votre email"><textarea rows="6" placeholder="Votre message"></textarea><a href="#" class="button">Envoyer</a></div>
-                     <div class="private-visit"><h3>Visite privée</h3><p>Pour une expérience exclusive, prenez rendez-vous pour visiter notre appartement-galerie à Nice et voir les œuvres en personne.</p><p><strong>Adresse :</strong><br>XX Rue Fictive, 06000 Nice</p><a href="#" class="button" style="display:block; text-align:center;">Prendre rendez-vous</a></div>
+                      <div class="contact-form">
+                          <h2>Nous écrire</h2> <form action="#" method="post">
+                              <label for="nom" class="sr-only">Votre nom</label>
+                              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                              
+                              <label for="email" class="sr-only">Votre email</label>
+                              <input type="email" id="email" name="email" placeholder="Votre email" required>
+                              
+                              <label for="sujet" class="sr-only">Sujet</label>
+                              <select id="sujet" name="sujet" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd;">
+                                  <option value="">Sujet de votre demande</option>
+                                  <option value="achat">Acquisition d'œuvre</option>
+                                  <option value="conseil">Conseil Déco</option>
+                                  <option value="presse">Presse & Partenariat</option>
+                              </select>
+
+                              <label for="message" class="sr-only">Votre message</label>
+                              <textarea id="message" name="message" rows="6" placeholder="Votre message" required></textarea>
+                              
+                              <button type="submit" class="button">Envoyer le message</button>
+                          </form>
+                      </div>
+
+                      <div class="private-visit">
+                          <h2>Visite Privée & Showroom</h2>
+                          <p>
+                              Pour une expérience exclusive, nous vous accueillons sur rendez-vous dans notre appartement-galerie. 
+                              Profitez d'un moment privilégié pour découvrir nos artistes émergents et confirmés.
+                          </p>
+                          
+                          <address style="font-style: normal; margin: 20px 0; line-height: 1.6;">
+                              <strong>Galerie Azur'Arts</strong><br>
+                              12 Avenue Jean Médecin<br> 06000 Nice, France<br>
+                              <a href="tel:+33400000000" style="color: var(--color-primary);">04 93 00 00 00</a><br>
+                              <a href="mailto:contact@azurarts.com" style="color: var(--color-primary);">contact@azurarts.com</a>
+                          </address>
+
+                          <a href="#" class="button" style="display:block; text-align:center;">Réserver un créneau</a>
+                      </div>
+                 </div>
+                 
+                 <div class="container seo-text-block" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee;">
+                     <h2>Questions Fréquentes</h2>
+                     
+                     <h3>Où se situe la galerie à Nice ?</h3>
+                     <p>
+                         Nous sommes idéalement situés dans le centre de <strong>Nice</strong>, à proximité de la Place Masséna et de la Promenade des Anglais. 
+                         Notre emplacement nous permet d'accueillir facilement les amateurs d'art venant de Cannes, Antibes ou Monaco. 
+                         Des parkings publics sont disponibles à quelques mètres de notre showroom.
+                     </p>
+
+                     <h3>Proposez-vous la livraison des tableaux ?</h3>
+                     <p>
+                         Absolument. Si vous ne pouvez pas emporter l'œuvre directement depuis notre galerie niçoise, nous organisons une <strong>livraison sécurisée</strong>. 
+                         Nous travaillons avec des transporteurs spécialisés dans l'art pour garantir que votre peinture ou sculpture arrive en parfait état, que ce soit en France ou à l'étranger.
+                     </p>
+
+                     <h3>Offrez-vous du conseil en investissement artistique ?</h3>
+                     <p>
+                         Oui. Azur'Arts accompagne les particuliers et les entreprises qui souhaitent diversifier leur patrimoine. 
+                         L'art contemporain est un actif tangible qui peut offrir des avantages fiscaux intéressants. 
+                         Contactez-nous pour discuter de votre projet d'acquisition et découvrir nos artistes à fort potentiel.
+                     </p>
                  </div>
              </div>
         </main>
 
         <footer>
             <div class="container">
-                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Azur'Arts Logo"></a>
+                <a href="index.html" class="logo"><img src="img-logo.jpg" alt="Logo Galerie Azur'Arts"></a>
                 <div>
                     <a href="mentions-legales.html">Mentions Légales</a>
                     <a href="cgv.html">CGV</a>
-                    <span>© 2025</span>
+                    <a href="contact.html">Contact</a>
+                    <span>© 2025 Azur'Arts Nice</span>
                 </div>
             </div>
         </footer>
-        </div>
-
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
